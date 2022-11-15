@@ -8,7 +8,7 @@ with the following modifications:
 
 ## Use
 
-Either starpasta.py or starpasta.exe; the former is a modifiable python script requiring a python installation with the numpy package, the latter is a standalone file created with the pyinstaller package.
+Use either starpasta.py or starpasta.exe; the former is a modifiable python script requiring a python installation with the numpy package, the latter is a standalone file created with the pyinstaller package.
 
 Running either will open a command prompt window that will prompt you for the star's mass and metallicity.
 
@@ -20,10 +20,13 @@ The code should then run, print out a short summary of the results, and print ou
 
 The results .csv file, which will be named after the mass and metallicity, can be read using starpasta_out.xlsx: copy the contents of the .csv to the "Raw Data" tab of starpasta_out, and then you can use the "Results" section to examine it:
 
-- The "Output Summary" box gives you a quick summary of the star’s evolution between stages and the duration of each one in millions of years.
-- "Single Output" lets you specify a specific age of the star and see the parameters at that particular point in time. These values are all linearly interpolated between the 2 nearest timesteps, which should be a decent estimate because the Starpasta code tries to ensure that timesteps are always short enough that none of these values change too much (excepting special events like supernovae).
-- The other boxes allow you to control graphs of the star’s whole evolution—both a Hertzprung–Russel diagram on the right and a user-defined graph below it, both of which display different stages in a star’s lifetime as different colors. Output Controls allows you to control which stages of the star’s lifetime are represented, or alternatively pick a start and end time to the data shown (this is necessarily rounded to the next timestep for the start time or the previous timestep for the end time). Starpasta will track the evolution of remnants (white dwarfs, neutron stars, black holes) for 10 trillion years, so you may need to exclude them or pick an appropriate end times to get reasonable graphs over time of the star’s evolution during its fusing lifetime.
-- "Graph Control" below that will allow you to pick two parameters from the list, which will be charted against each other in the graph to its right. The graph will tend to automatically start its axes at 0, so if you want a more detailed graph you may have to adjust the settings.
+The "Output Summary" box gives you a quick summary of the star’s evolution between stages and the duration of each one in millions of years.
+
+"Single Output" lets you specify a specific age of the star and see the parameters at that particular point in time. These values are all linearly interpolated between the 2 nearest timesteps, which should be a decent estimate because the Starpasta code tries to ensure that timesteps are always short enough that none of these values change too much (excepting special events like supernovae).
+
+The other boxes allow you to control graphs of the star’s whole evolution—both a Hertzprung–Russel diagram on the right and a user-defined graph below it, both of which display different stages in a star’s lifetime as different colors. "Output Controls" allows you to control which stages of the star’s lifetime are represented, or alternatively pick a start and end time to the data shown (this is necessarily rounded to the next timestep for the start time or the previous timestep for the end time). Starpasta will track the evolution of remnants (white dwarfs, neutron stars, black holes) for 10 trillion years, so you may need to exclude them or pick an appropriate end times to get reasonable graphs over time of the star’s evolution during its fusing lifetime.
+
+"Graph Control" below that will allow you to pick two parameters from the list, which will be charted against each other in the graph to its right. The graph will tend to automatically start its axes at 0, so if you want a more detailed graph you may have to adjust the settings.
 
 ## Notes
 
