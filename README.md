@@ -32,6 +32,7 @@ The other boxes allow you to control graphs of the star’s whole evolution—bo
 
 There are a number of ambiguities or oddities in the source code that I've done my best to reasonably interpret in my implementation:
 
+- Angular momentum and all elements of binary star evolution are not currently implemented.
 - The main paper (Hurley et al. 2000) specifies that core mass during the HG should be checked against that in the previous timestep to ensure it isn’t unphysically shrinking due to mass lass, but then later says that unphysical core shrinkage should be avoided by holding the initial mass constant when necessary, which would seem to be redundant. I implement the latter solution, as it is discussed in a bit more length.
 -	The core mass and stage timescale are interdependent during CHeB, so I take the last timestep’s core mass as an initial estimate for the current core mass, then iterate through calculating both values until there’s <0.1% variance between iterations.
 -	Frankly there’s a lot of oddities in the CHeB stage that required various extra checks to prevent divide-by-zero errors in particular edge cases or account for the brief use of complex numbers, but I don't think any of these should change the code's normal behavior
