@@ -8,6 +8,8 @@ with the following modifications:
 
 ## Use
 
+More detailed description [here](https://worldbuildingpasta.blogspot.com/2022/11/an-apple-pie-from-scratch-part-ii.html), but in short:
+
 Use either starpasta.py or starpasta.exe; the former is a modifiable python script requiring a python installation with the numpy package, the latter is a standalone file created with the pyinstaller package.
 
 Running either will open a command prompt window that will prompt you for the star's mass and metallicity.
